@@ -1,0 +1,30 @@
+# Ignore Visual Studio folders and files
+.vs/
+*.user
+*.suo
+
+# Ignore build output folders
+bin/
+obj/
+Debug/
+Release/
+
+# Ignore temporary files
+*.db
+*.db-shm
+*.db-wal
+*.cache
+*.vsidx
+*.json
+*.txt
+
+# Ignore Rider/JetBrains project files (optional, if using)
+.idea/
+
+# Ignore NuGet packages
+*.nupkg
+*.nuspec
+*.snupkg
+project.assets.json
+project.nuget.cache
+*.nuget.g.*
