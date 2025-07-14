@@ -109,6 +109,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Add CORS services
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost", policy => policy.WithOrigins("http://localhost:4200")  // Allow the Angular app running on localhost:4200
+     .AllowAnyHeader()                      // Allow any headers in requests
+     .AllowAnyMethod());                     // Allow any HTTP method (GET, POST, etc.)
+});
+
+app.UseCors("AllowLocalhost");
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
